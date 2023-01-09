@@ -121,10 +121,14 @@ header h1 {
 }
 
 .main {
-    position: relative;
+    position: absolute;
     left: 300px;
+    top: 75px;
     color: black;
+    border-left: 1.5px inset rgba(40, 40, 40, .3);
     z-index: 2;
+    overflow: scroll;
+    height: 100%;
 }
 
 .main h2 {
@@ -135,9 +139,7 @@ header h1 {
     font-family: 'Fira Sans SemiBold', monospace;
     text-align: center;
     align-content: left;
-    border-right: 3px inset rgba(40, 40, 40, .3);
-    border-top: 2px solid rgba(40, 40, 40, .3);
-    position: fixed;
+    position: sticky;
     top: 74px;
     height: 100%;
     width: 300px;
@@ -145,6 +147,7 @@ header h1 {
 
 .mainnav {
     border: none !important;
+    position: relative;
 }
 
 .sidenav summary {
@@ -163,7 +166,18 @@ header h1 {
     border-radius: 7.5px;
 }
 
+.sidenav a {
+    text-decoration: none;
+    color: #fc36c2;
+}
 
+.sidenav ul li ul li:hover {
+    background-color: rgba(88, 88, 88, .05);
+}
+
+.sidenav ul li a:hover {
+    color: #F6B574;
+}
 
 
 .section {
@@ -179,13 +193,17 @@ header h1 {
     font-family: 'Fira Code', monospace;
     padding: 2px 4px;
     background-color: lightgrey;
-    border-radius: 7.5px;
-    display: inline;
+    border-radius: 5px;
+    display: inline-block;
 }
 
 .section h4 {
     font-family: 'Fira Sans';
     padding: 10px 0;
+}
+
+.part {
+    padding-bottom: 40px;
 }
 
 .code {
@@ -195,9 +213,21 @@ header h1 {
     background-color: #000a18;
     border-radius: 10px;
     width: 600px;
+    font-size: 120%;
+}
+
+.numbering {
+    color: rgba(80, 80, 80, .8)
 }
 
 .element {
     color: #1786D0;
-    display: inline;
+}
+
+.attribute {
+    color: #00c3ff;
+}
+
+.string {
+    color: #ffbf00;
 }
